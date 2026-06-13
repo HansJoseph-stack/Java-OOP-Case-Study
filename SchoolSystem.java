@@ -14,7 +14,7 @@ class SchoolSystem {
     }
 
 
-    public Person getById(String id) {
+    public Person findById(String id) {
         for(Person p : people) {
             if (p.getId().equalsIgnoreCase(id)) {
                 return(p);
@@ -25,7 +25,7 @@ class SchoolSystem {
     }
 
     public boolean removeById(String id) {
-        Person p = getById(id);
+        Person p = findById(id);
         if (p != null) {
             people.remove(p);
             return true;
